@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salma Sabbour | I make complex things simple</title>
+<meta name="description" content="Salma Sabbour: fifteen years at SAP, Oracle and Gameball across presales, go-to-market, managed services and product marketing. I take something tangled and make it clear enough that people actually get it.">
+<link rel="canonical" href="https://www.salmasabbour.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salmasabbour.com/">
+<meta property="og:title" content="Salma Sabbour | I make complex things simple">
+<meta property="og:description" content="Five hats, one connecting thread: I take something tangled and make it clear enough that people actually get it.">
+<meta property="og:image" content="https://www.salmasabbour.com/assets/hero-tangled-to-useful.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0F2A2C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&amp;family=Inter:wght@400;500;600;700&amp;family=Caveat:wght@600&amp;family=Aref+Ruqaa:wght@700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --soft:#FDEEE9; --ink:#0F2A2C; --body:#34494B; --muted:#546B6D; --faint:#56696B;
+  --line:#DCE7E5; --ph:#F1F6F5; --accent:#0F6E6A; --hl:#F05A3A; --arrow:#F05A3A; --note:#F05A3A;
+  --dark:#0F2A2C; --card:#17393B; --cardline:#2C5153; --dmuted:#A8C2C0; --dbody:#DCE8E6;
+  --dnote:#F05A3A; --dph:#C5D6D4; --dashed:#3F6466; --dtext:#FFFFFF;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;overflow-x:clip;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)} a:hover{opacity:.8}
+img,video{max-width:100%}
+h1,h2,h3{font-family:Archivo,sans-serif}
+.thread{display:block}
+@media (max-width:760px){.thread{display:none}}
+.btn-round{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:999px;border:0;background:#FFFFFF;color:var(--ink);font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,44,.15);z-index:2}
+.btn-round.prev{left:8px} .btn-round.next{right:8px}
+.dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
+.dots span{width:7px;height:7px;border-radius:999px;background:rgba(15,42,44,.22)}
+.dots span.on{background:var(--accent)}
+.zoom{position:absolute;inset:0;width:100%;height:100%;border:0;background:none;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
+.zoom img,.zoom video{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.zoom video{border-radius:8px}
+:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:1000;background:rgba(8,22,24,.92);display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:72px 72px 32px}
+.lb.open{display:flex}
+.lb img,.lb video{max-width:100%;max-height:calc(100vh - 170px);object-fit:contain;border-radius:12px;display:block}
+.lb img{background:#FFFFFF} .lb video{background:#000000}
+.lb p{margin:0;color:#DCE8E6;font-size:15px;text-align:center}
+.lb button{position:absolute;width:44px;height:44px;border-radius:999px;border:0;background:#FFFFFF;color:#0F2A2C;font-size:22px;cursor:pointer}
+.lb .close{top:20px;right:20px;font-size:24px;line-height:1}
+.lb .prev{left:16px;top:50%} .lb .next{right:16px;top:50%}
+@media (max-width:600px){.lb{padding:72px 12px 32px}.lb .prev,.lb .next{top:auto;bottom:24px}}
+</style>
+</head>
+<body>
+<div>
+
+<!-- NAV -->
+<header style="max-width:1200px;margin:0 auto;padding:28px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<nav aria-label="Main" style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:500">
+<a href="#rooms" style="color:var(--ink);text-decoration:none">What I do</a>
+<a href="#work" style="color:var(--ink);text-decoration:none">Proof points</a>
+<a href="#voice" style="color:var(--ink);text-decoration:none">Me in action</a>
+<a href="#making" style="color:var(--ink);text-decoration:none">Beyond work</a>
+<a href="mailto:salma.sabbour@gmail.com" style="background:var(--accent);color:#FFFFFF;text-decoration:none;padding:12px 20px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center">Email me</a>
+</nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="top" style="max-width:1440px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,3vw,48px) clamp(56px,7vw,96px);display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 500px;min-width:0">
+<h1 style="margin:0;font-weight:800;font-size:clamp(44px,6vw,80px);line-height:1.04;letter-spacing:-0.03em">I make complex things <span style="color:var(--hl);padding:0 0.1em;border-radius:8px;font-family:Caveat,cursive;font-weight:600;font-size:1.25em;letter-spacing:0">simple</span> enough to buy, use and learn.</h1>
+<p style="margin:28px 0 0;max-width:620px;font-size:20px;color:var(--body)">Hi, I'm <strong style="color:var(--ink);font-weight:600">Salma Sabbour</strong>. Over fifteen years at SAP, Oracle and Gameball, I've worn five different hats, with one thread running through them all: I take something tangled and make it clear enough that people actually <span style="position:relative;white-space:nowrap">get it<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-4px;bottom:-10px;width:calc(100% + 8px);height:14px;overflow:visible"><path d="M2 9 C 40 3, 90 12, 140 6 S 185 4, 198 7" fill="none" style="stroke:var(--note)" stroke-width="3" stroke-linecap="round"/></svg></span>.</p>
+<div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:20px;align-items:center">
+<a href="mailto:salma.sabbour@gmail.com" style="background:var(--accent);color:#FFFFFF;text-decoration:none;font-weight:600;padding:16px 28px;border-radius:999px;min-height:52px;display:inline-flex;align-items:center;font-size:17px">Email me</a>
+<a href="https://www.linkedin.com/in/salmasabbour" target="_blank" rel="noopener" style="color:var(--ink);font-weight:500;font-size:15px">Connect on LinkedIn ↗</a>
+</div>
+</div>
+<div style="flex:1.3 1 520px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px">
+<div style="position:relative;width:100%;container-type:inline-size">
+<a href="https://lnkd.in/p/e-EataHf" target="_blank" rel="noopener" aria-label="Read my LinkedIn post behind المكنة طلعت قماش" style="display:block"><img src="assets/hero-tangled-to-useful.png" width="1399" height="577" alt="Hand-drawn illustration: a tangled line runs through a delighted man in glasses and a bow tie, who points ahead as the line straightens into a coral arrow" style="width:100%;height:auto;display:block"></a>
+<p lang="ar" dir="rtl" style="position:absolute;right:0;top:1%;margin:0;font-family:'Aref Ruqaa',serif;font-weight:700;font-size:clamp(16px,5cqw,52px);line-height:1.2;color:var(--note);white-space:nowrap;pointer-events:none">المكنة طلعت قماش</p>
+</div>
+<p style="margin:8px 0 0;font-family:Caveat,cursive;font-size:clamp(34px,4.4vw,56px);line-height:1.1;color:var(--note);text-align:center;transform:rotate(-3deg)">from tangled to useful</p>
+</div>
+</section>
+
+<!-- FIVE HATS -->
+<section id="rooms" style="background:var(--dark);color:var(--dtext)">
+<div style="max-width:1200px;margin:0 auto;padding:96px 32px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:48px">
+<h2 style="margin:0;font-weight:800;font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-0.02em;max-width:720px">Five hats, one connecting thread.</h2>
+<p style="margin:0;font-family:Caveat,cursive;font-size:28px;color:var(--dnote);transform:rotate(-2deg)">notice the pattern?</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;position:relative;z-index:0">
+
+<article style="position:relative;background:var(--card);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<svg class="thread" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-10px;top:40px;width:calc(100% + 20px);height:24px;overflow:visible;pointer-events:none;z-index:-1"><path d="M0 12 C 12 4, 38 4, 50 12 S 88 20, 100 12" fill="none" style="stroke:var(--arrow)" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+<svg width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="Top hat" fill="none" style="stroke:var(--dnote)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 38 C 18 45, 46 45, 59 38"/><path d="M18 39 L 19 9 C 27 5, 38 5, 46 8 L 46 39"/><path d="M19 30 C 28 33, 38 33, 46 30"/></svg>
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--dmuted)">SAP · Presales</p>
+<h3 style="margin:0;font-size:22px;line-height:1.25">Enterprise software, made easy to buy</h3>
+<p style="margin:0;color:var(--dbody);font-size:16px">Discoveries and demos for C-level buyers. I swapped slide decks for mind maps and whiteboards, and the mind maps became the standard in SAP's Digital Hub.</p>
+<p style="margin:auto 0 0;padding-top:14px;border-top:1px solid var(--cardline);font-family:Archivo,sans-serif;font-weight:600;font-size:18px;color:var(--dtext)">130+ enterprise engagements</p>
+</article>
+
+<article style="position:relative;background:var(--card);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<svg class="thread" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-10px;top:40px;width:calc(100% + 20px);height:24px;overflow:visible;pointer-events:none;z-index:-1"><path d="M0 12 C 12 4, 38 4, 50 12 S 88 20, 100 12" fill="none" style="stroke:var(--arrow)" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+<svg width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="Graduation cap" fill="none" style="stroke:var(--dnote)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6 L 60 16 L 32 26 L 4 16 Z"/><path d="M16 21 L 16 33 C 24 39, 40 39, 48 33 L 48 21"/><path d="M58 17 C 59 22, 59 27, 58 32"/><circle cx="58" cy="35" r="2.5"/></svg>
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--dmuted)">Oracle · Presales manager</p>
+<h3 style="margin:0;font-size:22px;line-height:1.25">Presales skills, made easy to learn</h3>
+<p style="margin:0;color:var(--dbody);font-size:16px">Built and led a team of 11 across Egypt and Romania. I coached the junior presales and helped shape parts of their onboarding, so they got into real deals quickly.</p>
+<p style="margin:auto 0 0;padding-top:14px;border-top:1px solid var(--cardline);font-family:Archivo,sans-serif;font-weight:600;font-size:18px;color:var(--dtext)">100% of the team in live deals within year one</p>
+</article>
+
+<article style="position:relative;background:var(--card);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<svg class="thread" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-10px;top:40px;width:calc(100% + 20px);height:24px;overflow:visible;pointer-events:none;z-index:-1"><path d="M0 12 C 12 4, 38 4, 50 12 S 88 20, 100 12" fill="none" style="stroke:var(--arrow)" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+<svg width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="Beret" fill="none" style="stroke:var(--dnote)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30 C 3 18, 22 8, 38 9 C 54 10, 63 20, 56 28 C 50 35, 20 37, 8 30 Z"/><path d="M14 32 C 24 38, 42 38, 50 33"/><path d="M36 9 C 36 7, 37 5, 39 4"/></svg>
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--dmuted)">SAP · Global go-to-market</p>
+<h3 style="margin:0;font-size:22px;line-height:1.25">Sales enablement, made snackable</h3>
+<p style="margin:0;color:var(--dbody);font-size:16px">A library of reusable demos, explainer videos and decks, plus an 18-episode podcast, so sales teams could pick up a pitch in minutes instead of days.</p>
+<p style="margin:auto 0 0;padding-top:14px;border-top:1px solid var(--cardline);font-family:Archivo,sans-serif;font-weight:600;font-size:18px;color:var(--dtext)">60% less prep · new hires demo-ready in a month</p>
+</article>
+
+<article style="position:relative;background:var(--card);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<svg class="thread" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-10px;top:40px;width:calc(100% + 20px);height:24px;overflow:visible;pointer-events:none;z-index:-1"><path d="M0 12 C 12 4, 38 4, 50 12 S 88 20, 100 12" fill="none" style="stroke:var(--arrow)" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+<svg width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="Crown" fill="none" style="stroke:var(--dnote)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 36 L 12 15 L 22 27 L 32 9 L 42 27 L 52 15 L 54 36 Z"/><path d="M10 36 L 54 36 L 53 43 L 11 43 Z"/><circle cx="12" cy="11.5" r="2.6"/><circle cx="32" cy="5.5" r="2.6"/><circle cx="52" cy="11.5" r="2.6"/></svg>
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--dmuted)">Gameball · Managed services</p>
+<h3 style="margin:0;font-size:22px;line-height:1.25">A new business line, made repeatable</h3>
+<p style="margin:0;color:var(--dbody);font-size:16px">Owned the P&amp;L of a new service line and built it from scratch: fixed deliverables, how-to guides, and small tools for ROI and tier design. Simple to run, and it held up on real client work.</p>
+<p style="margin:auto 0 0;padding-top:14px;border-top:1px solid var(--cardline);font-family:Archivo,sans-serif;font-weight:600;font-size:18px;color:var(--dtext)"><span style="position:relative;display:inline-block;padding:0 6px">4×<svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-10px;top:-9px;width:calc(100% + 20px);height:calc(100% + 18px);overflow:visible"><path d="M52 5 C 84 2, 99 18, 95 33 C 91 52, 42 58, 15 50 C -1 44, 3 18, 22 10 C 35 5, 55 3, 74 7" fill="none" style="stroke:var(--dnote)" stroke-width="2.5" stroke-linecap="round"/></svg></span> managed-services revenue</p>
+</article>
+
+<article style="position:relative;background:var(--card);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px">
+<svg class="thread" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-10px;top:40px;width:calc(100% + 20px);height:24px;overflow:visible;pointer-events:none;z-index:-1"><path d="M0 12 C 12 4, 38 4, 50 12 S 88 20, 100 12" fill="none" style="stroke:var(--arrow)" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+<svg width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="Wizard hat" fill="none" style="stroke:var(--dnote)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 40 C 21 28, 29 15, 42 3 C 41 17, 44 30, 52 40"/><path d="M4 40 C 20 47, 44 47, 60 40"/><path d="M33 20 L 35 25 L 40 26 L 36 29 L 37 34 L 33 31 L 29 34 L 30 29 L 26 26 L 31 25 Z"/></svg>
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--dmuted)">Gameball · Product marketing</p>
+<h3 style="margin:0;font-size:22px;line-height:1.25">Features, made clear and relevant</h3>
+<p style="margin:0;color:var(--dbody);font-size:16px">Rebuilt the release process from scratch on Claude, covering scripts, blog posts, newsletters and visuals, so every feature shipped with a clear "why it matters to you."</p>
+<p style="margin:auto 0 0;padding-top:14px;border-top:1px solid var(--cardline);font-family:Archivo,sans-serif;font-weight:600;font-size:18px;color:var(--dtext)">~70% of release comms automated</p>
+</article>
+
+<article style="position:relative;border:2px dashed var(--dashed);border-radius:16px;padding:28px;display:flex;flex-direction:column;justify-content:flex-start;gap:10px">
+<svg width="64" height="48" viewBox="0 0 64 48" role="img" aria-label="A baseball cap with a question mark" fill="none" style="stroke:var(--dnote)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 33 C 6 18, 17 9, 30 9 C 42 9, 50 17, 50 30"/><path d="M50 30 C 56 30, 62 32, 62 36 C 62 38, 58 38, 50 37 C 36 36, 18 36, 6 33"/><path d="M29 9 C 25 16, 23 24, 24 34"/><circle cx="30" cy="7.5" r="2"/><path d="M33 18 C 33 14, 41 14, 41 18 C 41 21, 37 21, 37 25"/><circle cx="37" cy="29" r="1.2"/></svg>
+<p style="margin:0;font-family:Caveat,cursive;font-size:30px;line-height:1.2;color:var(--dnote)">hat number six?</p>
+<p style="margin:0;color:var(--dbody);font-size:16px">If your team has something tangled (a journey, a process, a product story), I'd like to hear about it.</p>
+<a href="https://www.linkedin.com/in/salmasabbour" target="_blank" rel="noopener" style="color:var(--dnote);font-weight:600">Let's talk on LinkedIn ↗</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- PROOF POINTS -->
+<section id="work" style="max-width:1200px;margin:0 auto;padding:96px 32px">
+<h2 style="margin:0 0 12px;font-weight:800;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em">Proof points</h2>
+<p style="margin:0 0 40px;color:var(--muted);max-width:640px">Real work. Real numbers.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px">
+
+<article style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
+<div style="border-bottom:1px solid var(--line)" data-carousel="1,2,3" data-label="sample">
+<div style="position:relative;aspect-ratio:4/3;background:#FFFFFF;overflow:hidden">
+<button type="button" class="zoom js-open" aria-label="View this sample larger" style="padding:16px 60px 30px"></button>
+<button type="button" class="btn-round prev js-prev" aria-label="Previous sample">‹</button>
+<button type="button" class="btn-round next js-next" aria-label="Next sample">›</button>
+<div class="dots" aria-hidden="true"></div>
+</div>
+<p class="js-caption" style="margin:0;padding:0 16px 12px;font-size:13px;color:var(--muted);text-align:center"></p>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:10px">
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">New business line · P&amp;L ownership · Service design</p>
+<h3 style="margin:0;font-size:21px;line-height:1.3">A new business line, built from scratch</h3>
+<p style="margin:0;color:var(--body);font-size:16px">I owned the P&amp;L of Managed Services, a new revenue line next to the core product: loyalty management as a service. I turned one-off consulting into a repeatable offer: five stages from Discover to Operate, a standard deliverable at each step (a discovery mind map, a financial model, data-driven tier design, campaign plans, performance reviews), and Lovable tools that sped up the ROI, tier and uplift work. It became a growth lever, not just an add-on.</p>
+<p style="margin:0;color:var(--body);font-size:16px;font-weight:600">Revenue grew 4×, and the service was part of ~48% of closed deals.</p>
+</div>
+</article>
+
+<article style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
+<div style="background:var(--soft);padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px;justify-content:center">
+<div style="display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;font-size:12px;color:var(--body)"><span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--ink)"><span style="width:12px;height:12px;border-radius:3px;background:var(--hl)"></span>Frequent redeemers</span><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:12px;height:12px;border-radius:3px;background:#B9C9C7"></span>Non-redeemers</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
+<div style="background:#FFFFFF;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px">
+<p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)">Came back to buy again</p>
+<div style="position:relative;height:160px;display:flex;align-items:flex-end;justify-content:center;gap:12px">
+<div style="width:38%;height:30%;background:#B9C9C7;border-radius:6px 6px 0 0;display:flex;justify-content:center;padding-top:6px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:20px;color:#2E3B3B">6%</span></div>
+<div style="width:38%;height:100%;background:var(--hl);border-radius:6px 6px 0 0;display:flex;justify-content:center;padding-top:10px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:26px;color:#FFFFFF">20%</span></div>
+<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:12%;top:18%;width:46%;height:48%;overflow:visible"><path d="M8 92 C 10 40, 40 18, 88 14" fill="none" style="stroke:var(--ink)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M74 4 L 90 14 L 76 26" fill="none" style="stroke:var(--ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+</div>
+<p style="margin:0;font-size:11px;line-height:1.3;color:var(--muted);text-align:center">within 5 months</p>
+</div>
+<div style="background:#FFFFFF;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px">
+<p style="margin:0;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)">Bought more than before</p>
+<div style="height:110px;display:flex;align-items:flex-end;justify-content:center;gap:10px">
+<div aria-hidden="true" style="width:44%;height:100%;background:var(--hl);clip-path:polygon(50% 0,100% 40%,70% 40%,70% 100%,30% 100%,30% 40%,0 40%)"></div>
+<div aria-hidden="true" style="width:44%;height:62%;background:var(--hl);opacity:.75;clip-path:polygon(50% 0,100% 45%,70% 45%,70% 100%,30% 100%,30% 45%,0 45%)"></div>
+</div>
+<div style="display:flex;justify-content:center;gap:10px;text-align:center"><div style="width:44%"><p style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:22px;line-height:1.1;color:var(--ink)">+32%</p><p style="margin:2px 0 0;font-size:11px;line-height:1.2;color:var(--muted)">purchase frequency</p></div><div style="width:44%"><p style="margin:0;font-family:Archivo,sans-serif;font-weight:800;font-size:22px;line-height:1.1;color:var(--ink)">+14%</p><p style="margin:2px 0 0;font-size:11px;line-height:1.2;color:var(--muted)">basket size</p></div></div>
+<p style="margin:0;font-size:11px;line-height:1.3;color:var(--muted);text-align:center">vs. their own first 5 months</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="flex:1;background:#FFFFFF;border-radius:12px;padding:12px;display:flex;flex-direction:column;justify-content:center;gap:4px"><div style="display:flex;align-items:center;justify-content:space-between"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--hl)">4×</span><svg width="30" height="26" viewBox="0 0 30 26" aria-hidden="true"><path d="M7 2 H23 L28 9 L15 24 L2 9 Z M2 9 H28 M11 2 L9 9 L15 24 M19 2 L21 9 L15 24" fill="none" style="stroke:var(--hl)" stroke-width="1.8" stroke-linejoin="round"/></svg></div><span style="font-size:11px;line-height:1.3;color:var(--muted)">lifetime value vs. non-redeemers</span></div>
+<div style="flex:1;background:var(--dark);border-radius:12px;padding:12px;display:flex;flex-direction:column;justify-content:center;gap:4px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--hl)">~12×</span><span style="font-size:11px;line-height:1.3;color:#DCE8E6">incremental revenue per riyal of points they redeemed</span></div>
+</div>
+</div>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:10px">
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Program design · Loyalty economics · Cohort analysis</p>
+<h3 style="margin:0;font-size:21px;line-height:1.3">A loyalty program for a Saudi retail brand: designed it, then measured it</h3>
+<p style="margin:0;color:var(--body);font-size:16px">I designed the program, from points economics to campaigns, then ran the analysis of what it actually did. Over five months, 20% of frequent redeemers came back and bought again, against 6% of non-redeemers. They bought more often, spent more per order, and were worth four times as much over their lifetime. Redemption rate grew six-fold, from 2% to 12%.</p>
+<p style="margin:0;color:var(--faint);font-size:13px">Same customers, first five months on the program vs. the next five. SAR 3.2M incremental revenue on SAR 260K of redeemed points.</p>
+</div>
+</article>
+
+<article style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
+<div style="border-bottom:1px solid var(--line)" data-carousel="0,13,14" data-label="journey">
+<div style="position:relative;aspect-ratio:16/10;background:#FFFFFF;overflow:hidden">
+<button type="button" class="zoom js-open" aria-label="View this journey larger" style="padding:10px 56px 26px"></button>
+<button type="button" class="btn-round prev js-prev" aria-label="Previous journey">‹</button>
+<button type="button" class="btn-round next js-next" aria-label="Next journey">›</button>
+<div class="dots" aria-hidden="true"></div>
+</div>
+<p class="js-caption" style="margin:0;padding:0 16px 12px;font-size:13px;color:var(--muted);text-align:center"></p>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:10px">
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Service design · Requirements · Prototyping</p>
+<h3 style="margin:0;font-size:21px;line-height:1.3">A new mall, four POS systems, one journey everyone could agree on</h3>
+<p style="margin:0;color:var(--body);font-size:16px">I took over the loyalty program for a new MENA shopping mall: owned stores on four different POS systems, tenant stores, a service desk, and a custom app and portal. I mapped it into six customer journeys, prototyped the app and service-desk portal in Lovable before development started, ran the app-partner selection, and led the weekly syncs with the dev team.</p>
+<p style="margin:0;color:var(--body);font-size:16px;font-style:italic">Instead of asking the client how they wanted it to work, I showed them a proposed design to react to.</p>
+</div>
+</article>
+
+<article style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
+<div style="border-bottom:1px solid var(--line)" data-carousel="15,4,5,9,10,11,12" data-label="slide">
+<div style="position:relative;aspect-ratio:4/3;background:#FFFFFF;overflow:hidden">
+<button type="button" class="zoom js-open" aria-label="View this slide larger" style="padding:16px 60px 30px"></button>
+<button type="button" class="btn-round prev js-prev" aria-label="Previous slide">‹</button>
+<button type="button" class="btn-round next js-next" aria-label="Next slide">›</button>
+<div class="dots" aria-hidden="true"></div>
+</div>
+<p class="js-caption" style="margin:0;padding:0 16px 12px;font-size:13px;color:var(--muted);text-align:center"></p>
+</div>
+<div style="position:relative;padding:24px;display:flex;flex-direction:column;gap:10px">
+<p style="position:absolute;top:14px;right:20px;margin:0;padding:2px 4px 4px;font-family:Caveat,cursive;font-size:26px;line-height:1;color:var(--note);transform:rotate(3deg);white-space:nowrap;z-index:2">my favourite project ✦</p>
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Go-to-market system · AI process design</p>
+<h3 style="margin:0;font-size:21px;line-height:1.3">From release to reach: a release process rebuilt on Claude</h3>
+<p style="margin:0;color:var(--body);font-size:16px">Features shipped every two weeks, and each one could need release notes, a newsletter, LinkedIn carousels, a blog and a demo video. I rebuilt that as a system: features are captured from Slack and ClickUp, sorted A/B/C by impact so effort goes where it matters, and eight Claude skills I wrote draft the scripts, copy, visuals and blog, then publish to the website. AI does the first draft; I make the calls, and nothing ships without my review.</p>
+<p style="margin:0;color:var(--body);font-size:16px;font-weight:600">~70% of release communication automated.</p>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- VOICE -->
+<section id="voice" style="background:var(--soft)">
+<div style="max-width:1200px;margin:0 auto;padding:96px 32px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+<div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font-weight:800;font-size:clamp(32px,4vw,48px);letter-spacing:-0.02em">Hear me explain something</h2>
+<div style="aspect-ratio:16/9;background:var(--dark);border-radius:16px;overflow:hidden">
+<iframe src="https://www.youtube-nocookie.com/embed/-Fev69sjMc0" title="Point Multiplier Campaigns: a product walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;height:100%;border:0;display:block"></iframe>
+</div>
+<p style="margin:0;font-size:13px;color:var(--muted)">Point Multiplier Campaigns: a product walkthrough. <a href="https://youtu.be/-Fev69sjMc0" target="_blank" rel="noopener">Watch on YouTube ↗</a></p>
+</div>
+<div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:16px;padding-top:8px">
+<p style="margin:0;font-family:Caveat,cursive;font-size:28px;color:var(--note)">the podcast</p>
+<div style="background:#FFFFFF;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<h3 style="margin:0;font-size:22px">CX Central Perk</h3>
+<p style="margin:0;color:var(--body);font-size:16px">18 short episodes with field experts and tech partners, built so sales and CS teams could open an industry CX conversation in under 15 minutes.</p>
+<video src="assets/podcast-snippet.mp4" poster="assets/podcast-poster.jpg" controls preload="metadata" playsinline aria-label="CX Central Perk podcast snippet: The one where you start a CX conversation with an FMCG" style="width:100%;aspect-ratio:16/9;border-radius:12px;background:#000000;display:block"></video>
+<p style="margin:0;font-size:13px;color:var(--muted)">A 54-second clip from <em>The One Where You Start a CX Conversation with an FMCG</em>.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MAKING -->
+<section id="making" style="max-width:1200px;margin:0 auto;padding:96px 32px">
+<div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between;margin-bottom:40px">
+<div style="max-width:680px">
+<h2 style="margin:0 0 16px;font-family:Caveat,cursive;font-weight:600;font-size:clamp(52px,6vw,76px);line-height:1.05;color:var(--note);letter-spacing:0">The other side of me</h2>
+<p style="margin:0;color:var(--body);font-size:18px">When I'm not making things simple, I'm making things: with wood, with clay, with curiosity and with AI. It turns out to be the same muscle. You find out what works by touching it.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+
+<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+<div id="carp" style="position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--ph)">
+<img src="assets/carpentry-after.jpg" loading="lazy" alt="After: the finished dark-stained plant stand with a trailing pothos, at home by a window" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+<img id="carp-before" src="assets/carpentry-before.jpg" loading="lazy" alt="Before: the plant stand clamped up during glue-up on the workbench" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;clip-path:inset(0 50% 0 0)">
+<span aria-hidden="true" style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:rgba(15,42,44,.75);color:#FFFFFF;font-size:12px;font-weight:600">Before</span>
+<span aria-hidden="true" style="position:absolute;top:10px;right:10px;padding:4px 10px;border-radius:999px;background:rgba(15,42,44,.75);color:#FFFFFF;font-size:12px;font-weight:600">After</span>
+<div id="carp-line" aria-hidden="true" style="position:absolute;top:0;bottom:0;left:50%;width:3px;background:#FFFFFF;transform:translateX(-50%);box-shadow:0 0 6px rgba(0,0,0,.3);pointer-events:none">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:999px;background:#FFFFFF;color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25)">‹ ›</div>
+</div>
+<input id="carp-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after" style="position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize">
+</div>
+<figcaption><span style="display:block;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Carpentry</span><strong style="font-family:Archivo,sans-serif;font-size:20px;display:block">Made with wood</strong><span style="color:var(--muted);font-size:15px">Wanting to do more with my hands, I built a plant stand from raw wood: I chose the timber, learned half-lap, dowel and mortise-and-tenon joinery, then sanded, glued, clamped, painted and varnished it. Harder than it looks, and the most humbling thing I've learned.</span></figcaption>
+</figure>
+
+<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+<div style="aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--soft)"><img src="assets/clay-worry-stone.jpg" loading="lazy" alt="A hand holding a polymer clay worry stone, thumb resting in its dip: a round, peach-coloured face with sleepy eyes, rosy cheeks and a green leaf headband" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block"></div>
+<figcaption><span style="display:block;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Polymer clay</span><strong style="font-family:Archivo,sans-serif;font-size:20px;display:block">Made with clay</strong><span style="color:var(--muted);font-size:15px">In a world of screens, making something you can actually hold feels like the most human thing I do. Shaped, detailed and baked by hand, each stone has a dip that fits your thumb, made to be held. <em>P.S. This one is the very first worry stone I made.</em></span></figcaption>
+</figure>
+
+<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+<a href="https://www.tiktok.com/@reclaimingwonder/video/7692761464561536257" target="_blank" rel="noopener" aria-label="Watch Reclaiming Wonder episode 1 on TikTok" style="display:block;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--dark)"><video src="assets/reclaiming-wonder-ep1.mp4" poster="assets/reclaiming-wonder-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Reclaiming Wonder episode 1 opening: the question card, then Salma answering it with a banana" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block"></video></a>
+<figcaption><span style="display:block;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Reclaiming Wonder</span><strong style="font-family:Archivo,sans-serif;font-size:20px;display:block">Made with curiosity</strong><span style="color:var(--muted);font-size:15px">A series about slowing down enough to wonder. One real question, real research, and an answer a child could follow. <a href="https://www.tiktok.com/@reclaimingwonder/video/7692761464561536257" target="_blank" rel="noopener" style="font-weight:600">Watch episode 1</a></span></figcaption>
+</figure>
+
+<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+<div data-carousel="6,7,8" data-label="screen" data-phone="1" style="position:relative;aspect-ratio:1/1;width:100%;background:var(--soft);border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+<button type="button" class="js-open" aria-label="View this screen larger" style="position:relative;width:44%;padding:7px;border:0;border-radius:18px;background:#141414;cursor:zoom-in;box-shadow:0 12px 30px rgba(15,42,44,.28)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:#F8F4EF;padding-top:22px"><img class="js-phone-img" src="assets/budget-app-home.jpg" alt="" style="width:100%;height:auto;display:block"></div>
+<span aria-hidden="true" style="position:absolute;top:13px;left:50%;transform:translateX(-50%);width:30%;height:10px;border-radius:999px;background:#141414"></span>
+</button>
+<button type="button" class="btn-round prev js-prev" aria-label="Previous screen">‹</button>
+<button type="button" class="btn-round next js-next" aria-label="Next screen">›</button>
+<div class="dots" aria-hidden="true" style="bottom:8px"></div>
+</div>
+<figcaption><span style="display:block;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Side projects</span><strong style="font-family:Archivo,sans-serif;font-size:20px;display:block">Made with AI</strong><span style="color:var(--muted);font-size:15px">I don't just use AI at work. Off the clock, I build little things that make life easier, like the home budget app I use every day, made with Claude Code. (This page too.)</span></figcaption>
+</figure>
+
+</div>
+</section>
+</main>
+
+<!-- FOOTER CTA -->
+<footer id="cv" style="background:var(--dark);color:var(--dtext)">
+<div style="max-width:1200px;margin:0 auto;padding:96px 32px 48px;display:flex;flex-direction:column;gap:28px">
+<h2 style="margin:0;font-weight:800;font-size:clamp(36px,5vw,64px);line-height:1.05;letter-spacing:-0.03em;max-width:820px">Got something complicated? Let's make it simple.</h2>
+<img src="assets/signature.png" loading="lazy" alt="Signed, Salma Sabbour" style="align-self:flex-start;margin:-4px 0 0;height:clamp(56px,7vw,84px);width:auto;max-width:100%;object-fit:contain;display:block;transform:rotate(-3deg);transform-origin:left center">
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center">
+<a href="mailto:salma.sabbour@gmail.com" style="background:#FFFFFF;color:var(--ink);text-decoration:none;font-weight:600;padding:16px 28px;border-radius:999px;min-height:52px;display:inline-flex;align-items:center">salma.sabbour@gmail.com</a>
+<a href="https://www.linkedin.com/in/salmasabbour" target="_blank" rel="noopener" style="color:var(--dnote);font-weight:500">Connect on LinkedIn ↗</a>
+</div>
+<p style="margin:40px 0 0;padding-top:24px;border-top:1px solid var(--cardline);font-size:14px;color:var(--dmuted)">Cairo, Egypt · Open to remote roles across MENA and Europe · English and Arabic</p>
+</div>
+</footer>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Work sample viewer">
+<div id="lb-media"></div>
+<p id="lb-caption"></p>
+<button type="button" class="close" aria-label="Close">×</button>
+<button type="button" class="prev" aria-label="Previous">‹</button>
+<button type="button" class="next" aria-label="Next">›</button>
+</div>
+
+<script>
+(function () {
+  var A = 'assets/';
+  var gallery = [
+    { type: 'image', src: A + 'mall-key-elements.jpg', alt: 'Key experience elements for a shopping-mall loyalty program: sign-up, collecting points, redeeming points and claiming store offers', caption: 'MENA shopping mall: the key experience elements' },
+    { type: 'video', src: A + 'lovable-tier-tool.mp4', alt: 'Lovable tool demo: upload, detect behaviour patterns, propose tiers', caption: 'The Lovable tool I built: from a raw sales file to a proposed tier structure in under a minute' },
+    { type: 'image', src: A + 'ms-five-stages.jpg', alt: 'The five-stage service from Discover to Operate', caption: 'Managed services: Discover to Operate' },
+    { type: 'image', src: A + 'ms-discovery-mindmap.jpg', alt: 'Business discovery mind map', caption: 'Managed services: business discovery mind map' },
+    { type: 'image', src: A + 'release-flow.jpg', alt: 'The end-to-end release flow', caption: 'Release process: the end-to-end flow' },
+    { type: 'image', src: A + 'release-ai-skills.jpg', alt: 'The eight AI skills in order of use', caption: 'Release process: the AI skills, in order of use' },
+    { type: 'image', src: A + 'budget-app-home.jpg', alt: 'Home budget app: home screen (amounts blurred)', caption: 'Home budget app (Claude Code): home' },
+    { type: 'image', src: A + 'budget-app-insights.jpg', alt: 'Home budget app: insights screen (amounts blurred)', caption: 'Home budget app (Claude Code): insights' },
+    { type: 'image', src: A + 'budget-app-history.jpg', alt: 'Home budget app: history screen (amounts blurred)', caption: 'Home budget app (Claude Code): history' },
+    { type: 'image', src: A + 'release-feature-classes.jpg', alt: 'Every feature earns a class: A spotlight, B standard, C minor', caption: 'Release process: every feature earns a class (A/B/C)' },
+    { type: 'image', src: A + 'release-assets.jpg', alt: 'The assets behind each release, and which are AI-assisted', caption: 'Release process: the assets behind each release' },
+    { type: 'image', src: A + 'output-linkedin-carousel.jpg', alt: 'Sample output: a seasonal LinkedIn carousel', caption: 'Output: seasonal LinkedIn carousel' },
+    { type: 'image', src: A + 'output-release-blog.jpg', alt: 'Sample output: the seasonal release blog', caption: 'Output: seasonal release blog (AI-drafted, then edited)' },
+    { type: 'image', src: A + 'mall-self-registration.jpg', alt: 'Self-registration journey: scan QR code, download app, sign up, account created, welcome reward by SMS', caption: 'MENA shopping mall: self-registration journey' },
+    { type: 'image', src: A + 'mall-redeem-owned-stores.jpg', alt: 'Redeem points at owned stores: cashier, customer app and loyalty system swimlanes', caption: 'MENA shopping mall: redeeming points at owned stores' },
+    { type: 'video', src: A + 'streak-feature-video.mp4', alt: 'Feature highlight video: Salma explaining streaks, then the streak setup in the product', caption: 'Output: a feature highlight video (streaks)' }
+  ];
+
+  function mediaEl(item, inLightbox) {
+    var el;
+    if (item.type === 'video') {
+      el = document.createElement('video');
+      el.src = item.src; el.muted = true; el.loop = true; el.autoplay = true;
+      el.setAttribute('playsinline', ''); el.setAttribute('muted', '');
+      if (inLightbox) el.controls = true;
+      el.setAttribute('aria-label', item.alt);
+    } else {
+      el = document.createElement('img');
+      el.src = item.src; el.alt = item.alt; el.loading = 'lazy';
+    }
+    return el;
+  }
+
+  /* ---------- Lightbox ---------- */
+  var lb = document.getElementById('lb'), lbMedia = document.getElementById('lb-media'), lbCap = document.getElementById('lb-caption');
+  var lbIdx = 0, lastFocus = null;
+  function renderLb() {
+    var item = gallery[lbIdx];
+    lbMedia.innerHTML = '';
+    lbMedia.appendChild(mediaEl(item, true));
+    lbCap.textContent = item.caption + ' · ' + (lbIdx + 1) + ' / ' + gallery.length;
+  }
+  function openLb(i) { lastFocus = document.activeElement; lbIdx = i; renderLb(); lb.classList.add('open'); document.body.style.overflow = 'hidden'; lb.querySelector('.close').focus(); }
+  function closeLb() { lb.classList.remove('open'); lbMedia.innerHTML = ''; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+  function stepLb(d) { lbIdx = (lbIdx + d + gallery.length) % gallery.length; renderLb(); }
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  lb.querySelector('.close').addEventListener('click', closeLb);
+  lb.querySelector('.prev').addEventListener('click', function () { stepLb(-1); });
+  lb.querySelector('.next').addEventListener('click', function () { stepLb(1); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    else if (e.key === 'ArrowLeft') stepLb(-1);
+    else if (e.key === 'ArrowRight') stepLb(1);
+  });
+
+  /* ---------- Carousels ---------- */
+  document.querySelectorAll('[data-carousel]').forEach(function (root) {
+    var items = root.getAttribute('data-carousel').split(',').map(Number);
+    var isPhone = root.hasAttribute('data-phone');
+    var pos = 0;
+    var openBtn = root.querySelector('.js-open');
+    var cap = root.querySelector('.js-caption');
+    var dots = root.querySelector('.dots');
+    var phoneImg = root.querySelector('.js-phone-img');
+    items.forEach(function () { dots.appendChild(document.createElement('span')); });
+    function render() {
+      var item = gallery[items[pos]];
+      if (isPhone) { phoneImg.src = item.src; phoneImg.alt = item.alt; }
+      else { openBtn.innerHTML = ''; openBtn.appendChild(mediaEl(item, false)); }
+      if (cap) cap.textContent = item.caption;
+      Array.prototype.forEach.call(dots.children, function (d, k) { d.className = k === pos ? 'on' : ''; });
+    }
+    root.querySelector('.js-prev').addEventListener('click', function () { pos = (pos + items.length - 1) % items.length; render(); });
+    root.querySelector('.js-next').addEventListener('click', function () { pos = (pos + 1) % items.length; render(); });
+    openBtn.addEventListener('click', function () { openLb(items[pos]); });
+    render();
+  });
+
+  /* ---------- Before / after slider ---------- */
+  var range = document.getElementById('carp-range'), before = document.getElementById('carp-before'), line = document.getElementById('carp-line');
+  function setCarp() { var v = Number(range.value); before.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)'; line.style.left = v + '%'; }
+  range.addEventListener('input', setCarp);
+  setCarp();
+})();
+</script>
+</body>
+</html>
