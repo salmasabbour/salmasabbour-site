@@ -508,6 +508,27 @@ h1,h2,h3{font-family:Archivo,sans-serif}
     render();
   });
 
+  /* ---------- Deep links: keep the linked proof point in view while images load ---------- */
+  (function () {
+    var ids = ['managed-services', 'loyalty-program', 'mall-journey', 'release-to-reach'];
+    var stop = false;
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (e) {
+      window.addEventListener(e, function () { stop = true; }, { once: true, passive: true });
+    });
+    function go() {
+      if (stop) return;
+      var id = (location.hash || '').slice(1);
+      if (ids.indexOf(id) === -1) return;
+      var el = document.getElementById(id);
+      if (el) el.scrollIntoView({ block: 'start' });
+    }
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    go();
+    window.addEventListener('load', go);
+    [300, 900, 1800, 3000].forEach(function (t) { setTimeout(go, t); });
+    window.addEventListener('hashchange', function () { stop = false; go(); });
+  })();
+
   /* ---------- Testimonials spotlight ---------- */
   (function () {
     var T = [["Ahmed Khairy", "CEO, Gameball", "She moves between analysis and creative problem solving with ease", "…which is a rarer combination than most people realize."], ["Tom Bird", "Global Head CRM & CX Sales Engagement, SAP", "…she has the rare ability to go both far and fast…", "…testing and learning at speed whilst bringing many along with her as collaborators."], ["Ahmed El Assy", "Co-founder, Gameball", "Customers trusted her completely…", "…more than one of them told us she was a big reason they trusted our product."], ["Petr Opichal", "Head of Solution Advisory, SAP CX EMEA", "…storytelling is second to none.", "She has a knack for blending content and context, creating compelling narratives that truly resonate…"], ["AbdelRahman ElGanzoury", "Digital Marketing Manager, Telgani · client", "Salma's ability to break down complex strategy and communicate it clearly makes her incredibly effective.", ""], ["Moataz Morsi", "Sr. Manager, Enterprise GTM, Gameball", "…she turned loyalty consulting from a set of ad hoc engagements into a real, documented service line", "She personally designed loyalty programs for some of our largest enterprise accounts, including a full omnichannel program for a retailer with over 800,000 customers…"], ["Ben Kelsey", "Trainer & enablement specialist", "If you're a recruiter, hire her!", "If you're a customer, you're in excellent hands."]];
