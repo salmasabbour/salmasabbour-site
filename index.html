@@ -55,8 +55,8 @@ h1,h2,h3{font-family:Archivo,sans-serif}
 .lb .prev{left:16px;top:50%} .lb .next{right:16px;top:50%}
 @media (max-width:600px){.lb{padding:72px 12px 32px}.lb .prev,.lb .next{top:auto;bottom:24px}}
 /* deep links to proof points */
-#managed-services,#loyalty-program,#mall-journey,#release-to-reach{scroll-margin-top:24px}
-#managed-services:target,#loyalty-program:target,#mall-journey:target,#release-to-reach:target{animation:tgt 2.4s ease-out 1}
+#managed-services,#loyalty-program,#mall-journey,#release-to-reach,#cx-central-perk{scroll-margin-top:24px}
+#managed-services:target,#loyalty-program:target,#mall-journey:target,#release-to-reach:target,#cx-central-perk:target{animation:tgt 2.4s ease-out 1}
 @keyframes tgt{0%,40%{box-shadow:0 0 0 4px var(--hl)}100%{box-shadow:0 0 0 4px transparent}}
 /* testimonials */
 .tq{background:var(--soft);border-radius:20px;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
@@ -340,7 +340,7 @@ h1,h2,h3{font-family:Archivo,sans-serif}
 </div>
 <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:16px;padding-top:8px">
 <p style="margin:0;font-family:Caveat,cursive;font-size:28px;color:var(--note)">the podcast</p>
-<div style="background:#FFFFFF;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<div id="cx-central-perk" style="background:#FFFFFF;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
 <h3 style="margin:0;font-size:22px">CX Central Perk</h3>
 <p style="margin:0;color:var(--body);font-size:16px">SAP's sales teams needed a quick way to talk credibly about customer experience in industries they didn't know well. So I created CX Central Perk: 18 short episodes with field experts and tech partners, each giving sales and CS teams what they need to open an industry CX conversation in under 15 minutes.</p>
 <video src="podcast-snippet.mp4" poster="podcast-poster.jpg" controls preload="metadata" playsinline aria-label="CX Central Perk podcast snippet: The one where you start a CX conversation with an FMCG" style="width:100%;aspect-ratio:16/9;border-radius:12px;background:#000000;display:block"></video>
@@ -510,7 +510,7 @@ h1,h2,h3{font-family:Archivo,sans-serif}
 
   /* ---------- Deep links: keep the linked proof point in view while images load ---------- */
   (function () {
-    var ids = ['managed-services', 'loyalty-program', 'mall-journey', 'release-to-reach'];
+    var ids = ['managed-services', 'loyalty-program', 'mall-journey', 'release-to-reach', 'cx-central-perk'];
     var stop = false;
     ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (e) {
       window.addEventListener(e, function () { stop = true; }, { once: true, passive: true });
