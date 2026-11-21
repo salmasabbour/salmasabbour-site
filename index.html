@@ -54,8 +54,31 @@ h1,h2,h3{font-family:Archivo,sans-serif}
 .lb .close{top:20px;right:20px;font-size:24px;line-height:1}
 .lb .prev{left:16px;top:50%} .lb .next{right:16px;top:50%}
 @media (max-width:600px){.lb{padding:72px 12px 32px}.lb .prev,.lb .next{top:auto;bottom:24px}}
+/* sticky top bar */
+html{scroll-padding-top:84px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);-webkit-backdrop-filter:saturate(1.6) blur(12px);backdrop-filter:saturate(1.6) blur(12px);border-bottom:1px solid transparent;transition:border-color .25s ease,box-shadow .25s ease}
+.topbar-in,.topbar-sig,.topnav-cta{transition:padding .25s ease,height .25s ease,min-height .25s ease}
+.topbar.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(15,42,44,0.06)}
+.topbar.scrolled .topbar-in{padding-top:12px !important;padding-bottom:12px !important}
+.topbar.scrolled .topbar-sig{height:32px !important}
+.topbar.scrolled .topnav-cta{padding:9px 18px !important;min-height:38px !important}
+.topnav a:not(.topnav-cta){position:relative;padding:6px 0}
+.topnav a:not(.topnav-cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--hl);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.topnav a:not(.topnav-cta):hover::after,.topnav a.active::after{transform:scaleX(1)}
+@media (max-width:760px){
+  html{scroll-padding-top:112px}
+  .topbar-in{padding-top:14px !important;padding-bottom:10px !important;row-gap:8px !important}
+  .topbar-sig{height:30px !important}
+  .topnav{order:3;width:100%;flex-wrap:nowrap !important;overflow-x:auto;gap:20px !important;font-size:14px !important;scrollbar-width:none;margin-left:0 !important;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  .topnav::-webkit-scrollbar{display:none}
+  .topnav a{white-space:nowrap;flex:none}
+  .topnav-cta{display:none !important}
+  .topbar.scrolled .topbar-in{padding-top:8px !important;padding-bottom:6px !important}
+  .topbar.scrolled .topbar-sig{height:26px !important}
+}
+@media (prefers-reduced-motion:reduce){.topbar,.topbar *{transition:none !important}}
 /* deep links to proof points */
-#managed-services,#loyalty-program,#mall-journey,#release-to-reach,#cx-central-perk{scroll-margin-top:24px}
+#managed-services,#loyalty-program,#mall-journey,#release-to-reach,#cx-central-perk{scroll-margin-top:12px}
 #managed-services:target,#loyalty-program:target,#mall-journey:target,#release-to-reach:target,#cx-central-perk:target{animation:tgt 2.4s ease-out 1}
 @keyframes tgt{0%,40%{box-shadow:0 0 0 4px var(--hl)}100%{box-shadow:0 0 0 4px transparent}}
 /* testimonials */
@@ -99,17 +122,19 @@ h1,h2,h3{font-family:Archivo,sans-serif}
 <div>
 
 <!-- NAV -->
-<header style="max-width:1440px;margin:0 auto;padding:28px clamp(20px,3vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
-<a href="https://www.salmasabbour.com/" style="display:inline-flex;align-items:center;text-decoration:none"><img src="signature.png" alt="Salma Sabbour" width="700" height="150" style="height:40px;width:auto;display:block"></a>
-<nav aria-label="Main" style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:500">
+<div class="topbar" id="topbar">
+<header class="topbar-in" style="max-width:1440px;margin:0 auto;padding:28px clamp(20px,3vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<a href="https://www.salmasabbour.com/" style="display:inline-flex;align-items:center;text-decoration:none"><img class="topbar-sig" src="signature.png" alt="Salma Sabbour" width="700" height="150" style="height:40px;width:auto;display:block"></a>
+<nav class="topnav" aria-label="Main" style="margin-left:auto;display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:500">
 <a href="#rooms" style="color:var(--ink);text-decoration:none">What I do</a>
 <a href="#work" style="color:var(--ink);text-decoration:none">Proof points</a>
 <a href="#words" style="color:var(--ink);text-decoration:none">Testimonials</a>
 <a href="#voice" style="color:var(--ink);text-decoration:none">Me in action</a>
 <a href="#making" style="color:var(--ink);text-decoration:none">Beyond work</a>
-<a href="mailto:salma.sabbour@gmail.com" style="background:var(--accent);color:#FFFFFF;text-decoration:none;padding:12px 20px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center">Email me</a>
+<a class="topnav-cta" href="mailto:salma.sabbour@gmail.com" style="background:var(--accent);color:#FFFFFF;text-decoration:none;padding:12px 20px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center">Email me</a>
 </nav>
 </header>
+</div>
 
 <main>
 <!-- HERO -->
@@ -507,6 +532,33 @@ h1,h2,h3{font-family:Archivo,sans-serif}
     openBtn.addEventListener('click', function () { openLb(items[pos]); });
     render();
   });
+
+  /* ---------- Sticky top bar: compact on scroll + highlight current section ---------- */
+  (function () {
+    var bar = document.getElementById('topbar'); if (!bar) return;
+    var links = Array.prototype.slice.call(document.querySelectorAll('.topnav a[href^="#"]'));
+    var secs = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var ticking = false, last = -2;
+    function update() {
+      ticking = false;
+      bar.classList.toggle('scrolled', window.scrollY > 8);
+      var line = window.innerHeight * 0.35, cur = -1;
+      secs.forEach(function (el, i) { if (el && el.getBoundingClientRect().top <= line) cur = i; });
+      if (cur > -1 && secs[cur].getBoundingClientRect().bottom < line) cur = -1;
+      links.forEach(function (a, i) {
+        a.classList.toggle('active', i === cur);
+        if (i === cur) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+      var nav = links[0] && links[0].parentNode;
+      if (cur > -1 && nav && nav.scrollWidth > nav.clientWidth && cur !== last) {
+        nav.scrollTo({ left: Math.max(0, links[cur].offsetLeft - 20), behavior: 'smooth' });
+      }
+      last = cur;
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
 
   /* ---------- Deep links: keep the linked proof point in view while images load ---------- */
   (function () {
