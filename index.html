@@ -40,6 +40,12 @@ h1,h2,h3{font-family:Archivo,sans-serif}
 .dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
 .dots span{width:7px;height:7px;border-radius:999px;background:rgba(15,42,44,.22)}
 .dots span.on{background:var(--accent)}
+.dots span{transition:width .3s ease}
+[data-autoplay] .dots span.on{width:22px;background:rgba(15,42,44,.22);position:relative;overflow:hidden}
+[data-autoplay] .dots span.on::after{content:"";position:absolute;inset:0;background:var(--accent);transform-origin:left;transform:scaleX(1)}
+[data-autoplay].ap-run .dots span.on::after{animation:apfill var(--ap-dur,6s) linear forwards}
+[data-autoplay].ap-run.ap-paused .dots span.on::after{animation-play-state:paused}
+@keyframes apfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .zoom{position:absolute;inset:0;width:100%;height:100%;border:0;background:none;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
 .zoom img,.zoom video{max-width:100%;max-height:100%;object-fit:contain;display:block}
 .zoom video{border-radius:8px}
@@ -292,7 +298,7 @@ html{scroll-padding-top:84px}
 </article>
 
 <article id="mall-journey" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
-<div style="border-bottom:1px solid var(--line)" data-carousel="0,13,14" data-label="journey">
+<div style="border-bottom:1px solid var(--line)" data-carousel="0,13,14" data-label="journey" data-autoplay>
 <div style="position:relative;aspect-ratio:16/10;background:#FFFFFF;overflow:hidden">
 <button type="button" class="zoom js-open" aria-label="View this journey larger" style="padding:10px 56px 26px"></button>
 <button type="button" class="btn-round prev js-prev" aria-label="Previous journey">‹</button>
@@ -310,7 +316,7 @@ html{scroll-padding-top:84px}
 </article>
 
 <article id="release-to-reach" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
-<div style="border-bottom:1px solid var(--line)" data-carousel="15,4,5,9,10,11,12" data-label="slide">
+<div style="border-bottom:1px solid var(--line)" data-carousel="15,4,5,9,10,11,12" data-label="slide" data-autoplay>
 <div style="position:relative;aspect-ratio:4/3;background:#FFFFFF;overflow:hidden">
 <button type="button" class="zoom js-open" aria-label="View this slide larger" style="padding:16px 60px 30px"></button>
 <button type="button" class="btn-round prev js-prev" aria-label="Previous slide">‹</button>
@@ -531,7 +537,46 @@ html{scroll-padding-top:84px}
     root.querySelector('.js-next').addEventListener('click', function () { pos = (pos + 1) % items.length; render(); });
     openBtn.addEventListener('click', function () { openLb(items[pos]); });
     render();
+    if (root.hasAttribute('data-autoplay')) autoplay(root, items, function () { return pos; }, function (p) { pos = p; render(); });
   });
+
+  /* ---------- Carousel autoplay: only while visible, pauses on hover/focus, holds after a manual click ---------- */
+  function autoplay(root, items, getPos, setPos) {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var DWELL = { 'mall-key-elements-animated.gif': 10, 'release-flow.gif': 8, 'release-ai-skills.gif': 8.5,
+      'release-feature-classes.gif': 7, 'release-assets.gif': 8.5, 'output-linkedin-carousel.gif': 7.5,
+      'output-release-blog.gif': 6.5, 'streak-feature-video.mp4': 13.5 };
+    var visible = false, hover = false, holdUntil = 0, timer = null, left = 0, started = 0;
+    function dwell() { var src = gallery[items[getPos()]].src.split('/').pop(); return (DWELL[src] || 6) * 1000; }
+    function paused() { return !visible || hover || document.hidden || Date.now() < holdUntil || document.getElementById('lb').classList.contains('open'); }
+    function arm(ms) {
+      clearTimeout(timer); left = ms; started = Date.now();
+      root.style.setProperty('--ap-dur', (ms / 1000) + 's');
+      root.classList.remove('ap-run'); void root.offsetWidth; root.classList.add('ap-run');
+      timer = setTimeout(next, ms);
+    }
+    function next() {
+      if (paused()) { timer = setTimeout(next, 500); return; }
+      setPos((getPos() + 1) % items.length); arm(dwell());
+    }
+    function pause() { root.classList.add('ap-paused'); clearTimeout(timer); left = Math.max(400, left - (Date.now() - started)); }
+    function resume() { if (paused()) return; root.classList.remove('ap-paused'); started = Date.now(); clearTimeout(timer); timer = setTimeout(next, left); }
+    root.addEventListener('mouseenter', function () { hover = true; pause(); });
+    root.addEventListener('mouseleave', function () { hover = false; resume(); });
+    root.addEventListener('focusin', function () { hover = true; pause(); });
+    root.addEventListener('focusout', function () { hover = false; resume(); });
+    root.querySelectorAll('.js-prev, .js-next').forEach(function (b) {
+      b.addEventListener('click', function () { holdUntil = Date.now() + 20000; arm(20000 + dwell()); });
+    });
+    document.addEventListener('visibilitychange', function () { if (document.hidden) pause(); else resume(); });
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var was = visible; visible = e.intersectionRatio >= 0.5;
+        if (visible && !was) { if (!root.classList.contains('ap-run')) arm(dwell()); else resume(); }
+        if (!visible && was) pause();
+      });
+    }, { threshold: [0, 0.5, 1] }).observe(root);
+  }
 
   /* ---------- Sticky top bar: compact on scroll + highlight current section ---------- */
   (function () {
