@@ -234,7 +234,7 @@ html{scroll-padding-top:84px}
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px">
 
 <article id="managed-services" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
-<div style="border-bottom:1px solid var(--line)" data-carousel="1,2,3" data-label="sample">
+<div style="border-bottom:1px solid var(--line)" data-carousel="1,2,3" data-label="sample" data-autoplay>
 <div style="position:relative;aspect-ratio:4/3;background:#FFFFFF;overflow:hidden">
 <button type="button" class="zoom js-open" aria-label="View this sample larger" style="padding:16px 60px 30px"></button>
 <button type="button" class="btn-round prev js-prev" aria-label="Previous sample">‹</button>
@@ -545,7 +545,7 @@ html{scroll-padding-top:84px}
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var DWELL = { 'mall-key-elements-animated.gif': 10, 'release-flow.gif': 8, 'release-ai-skills.gif': 8.5,
       'release-feature-classes.gif': 7, 'release-assets.gif': 8.5, 'output-linkedin-carousel.gif': 7.5,
-      'output-release-blog.gif': 6.5, 'streak-feature-video.mp4': 13.5 };
+      'output-release-blog.gif': 6.5, 'streak-feature-video.mp4': 13.5, 'lovable-tier-tool.mp4': 23.5 };
     var visible = false, hover = false, holdUntil = 0, timer = null, left = 0, started = 0;
     function dwell() { var src = gallery[items[getPos()]].src.split('/').pop(); return (DWELL[src] || 6) * 1000; }
     function paused() { return !visible || hover || document.hidden || Date.now() < holdUntil || document.getElementById('lb').classList.contains('open'); }
