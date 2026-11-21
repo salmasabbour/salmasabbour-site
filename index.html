@@ -473,8 +473,8 @@ html{scroll-padding-top:84px}
     { type: 'image', src: A + 'release-assets.gif', alt: 'The assets behind each release, and which are AI-assisted', caption: 'Release process: the assets behind each release' },
     { type: 'image', src: A + 'output-linkedin-carousel.gif', alt: 'Sample output: a seasonal LinkedIn carousel', caption: 'Output: seasonal LinkedIn carousel' },
     { type: 'image', src: A + 'output-release-blog.gif', alt: 'Sample output: the seasonal release blog', caption: 'Output: seasonal release blog (AI-drafted, then edited)' },
-    { type: 'image', src: A + 'mall-self-registration.jpg', alt: 'Self-registration journey: scan QR code, download app, sign up, account created, welcome reward by SMS', caption: 'MENA shopping mall: self-registration journey' },
-    { type: 'image', src: A + 'mall-redeem-owned-stores.jpg', alt: 'Redeem points at owned stores: cashier, customer app and loyalty system swimlanes', caption: 'MENA shopping mall: redeeming points at owned stores' },
+    { type: 'video', src: A + 'mall-self-registration-animated.mp4', alt: 'Self-registration journey: scan QR code, download app, sign up, account created, welcome reward by SMS', caption: 'MENA shopping mall: self-registration journey' },
+    { type: 'video', src: A + 'mall-redeem-owned-stores-animated.mp4', alt: 'Redeem points at owned stores: cashier, customer app and loyalty system swimlanes', caption: 'MENA shopping mall: redeeming points at owned stores' },
     { type: 'video', src: A + 'streak-feature-video.mp4', alt: 'Feature highlight video: Salma explaining streaks, then the streak setup in the product', caption: 'Output: a feature highlight video (streaks)' }
   ];
 
@@ -545,7 +545,8 @@ html{scroll-padding-top:84px}
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var DWELL = { 'mall-key-elements-animated.gif': 10, 'release-flow.gif': 8, 'release-ai-skills.gif': 8.5,
       'release-feature-classes.gif': 7, 'release-assets.gif': 8.5, 'output-linkedin-carousel.gif': 7.5,
-      'output-release-blog.gif': 6.5, 'streak-feature-video.mp4': 13.5, 'lovable-tier-tool.mp4': 23.5 };
+      'output-release-blog.gif': 6.5, 'streak-feature-video.mp4': 13.5, 'lovable-tier-tool.mp4': 23.5,
+      'mall-self-registration-animated.mp4': 10.5, 'mall-redeem-owned-stores-animated.mp4': 13.5 };
     var visible = false, hover = false, holdUntil = 0, timer = null, left = 0, started = 0;
     function dwell() { var src = gallery[items[getPos()]].src.split('/').pop(); return (DWELL[src] || 6) * 1000; }
     function paused() { return !visible || hover || document.hidden || Date.now() < holdUntil || document.getElementById('lb').classList.contains('open'); }
