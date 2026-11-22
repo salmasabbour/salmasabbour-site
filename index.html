@@ -462,8 +462,8 @@ html{scroll-padding-top:84px}
   var gallery = [
     { type: 'image', src: A + 'mall-key-elements-animated.gif', alt: 'Key experience elements for a shopping-mall loyalty program: sign-up, collecting points, redeeming points and claiming store offers', caption: 'MENA shopping mall: the key experience elements' },
     { type: 'video', src: A + 'lovable-tier-tool.mp4', alt: 'Lovable tool demo: upload, detect behaviour patterns, propose tiers', caption: 'The Lovable tool I built: from a raw sales file to a proposed tier structure in under a minute' },
-    { type: 'image', src: A + 'ms-five-stages.jpg', alt: 'The five-stage service from Discover to Operate', caption: 'Managed services: Discover to Operate' },
-    { type: 'image', src: A + 'ms-discovery-mindmap.jpg', alt: 'Business discovery mind map', caption: 'Managed services: business discovery mind map' },
+    { type: 'video', src: A + 'ms-five-stages-animated.mp4', alt: 'The five-stage service from Discover to Operate', caption: 'Managed services: Discover to Operate' },
+    { type: 'video', src: A + 'ms-discovery-mindmap-animated.mp4', alt: 'Business discovery mind map', caption: 'Managed services: business discovery mind map' },
     { type: 'image', src: A + 'release-flow.gif', alt: 'The end-to-end release flow', caption: 'Release process: the end-to-end flow' },
     { type: 'image', src: A + 'release-ai-skills.gif', alt: 'The eight AI skills in order of use', caption: 'Release process: the AI skills, in order of use' },
     { type: 'image', src: A + 'budget-app-home.jpg', alt: 'Home budget app: home screen (amounts blurred)', caption: 'Home budget app (Claude Code): home' },
@@ -546,7 +546,8 @@ html{scroll-padding-top:84px}
     var DWELL = { 'mall-key-elements-animated.gif': 10, 'release-flow.gif': 8, 'release-ai-skills.gif': 8.5,
       'release-feature-classes.gif': 7, 'release-assets.gif': 8.5, 'output-linkedin-carousel.gif': 7.5,
       'output-release-blog.gif': 6.5, 'streak-feature-video.mp4': 13.5, 'lovable-tier-tool.mp4': 23.5,
-      'mall-self-registration-animated.mp4': 10.5, 'mall-redeem-owned-stores-animated.mp4': 13.5 };
+      'mall-self-registration-animated.mp4': 8, 'mall-redeem-owned-stores-animated.mp4': 11,
+      'ms-five-stages-animated.mp4': 9, 'ms-discovery-mindmap-animated.mp4': 8.5 };
     var visible = false, hover = false, holdUntil = 0, timer = null, left = 0, started = 0;
     function dwell() { var src = gallery[items[getPos()]].src.split('/').pop(); return (DWELL[src] || 6) * 1000; }
     function paused() { return !visible || hover || document.hidden || Date.now() < holdUntil || document.getElementById('lb').classList.contains('open'); }
