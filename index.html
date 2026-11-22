@@ -242,6 +242,25 @@ html{scroll-padding-top:84px}
 <p style="margin:0 0 40px;color:var(--muted);max-width:640px">Real work. Real numbers.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px">
 
+<article id="release-to-reach" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
+<div style="border-bottom:1px solid var(--line)" data-carousel="15,4,5,9,10,11,12" data-label="slide" data-autoplay>
+<div style="position:relative;aspect-ratio:4/3;background:#FFFFFF;overflow:hidden">
+<button type="button" class="zoom js-open" aria-label="View this slide larger" style="padding:16px 60px 30px"></button>
+<button type="button" class="btn-round prev js-prev" aria-label="Previous slide">‹</button>
+<button type="button" class="btn-round next js-next" aria-label="Next slide">›</button>
+<div class="dots" aria-hidden="true"></div>
+</div>
+<p class="js-caption" style="margin:0;padding:0 16px 12px;font-size:13px;color:var(--muted);text-align:center"></p>
+</div>
+<div style="position:relative;padding:24px;display:flex;flex-direction:column;gap:10px">
+<p style="align-self:flex-end;margin:-8px 0 -2px;padding:0 4px;font-family:Caveat,cursive;font-size:26px;line-height:1;color:var(--note);transform:rotate(3deg);white-space:nowrap">my favourite project ✦</p>
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Go-to-market system · AI process design</p>
+<h3 style="margin:0;font-size:21px;line-height:1.3">From release to reach: a release process rebuilt on Claude</h3>
+<p style="margin:0;color:var(--body);font-size:16px">Features shipped every two weeks, and each one could need release notes, a newsletter, LinkedIn carousels, a blog and a demo video. I rebuilt that as a system: features are captured from Slack and ClickUp, sorted A/B/C by impact so effort goes where it matters, and eight Claude skills I wrote draft the scripts, copy, visuals and blog, then publish to the website. AI does the first draft; I make the calls, and nothing ships without my review.</p>
+<p style="margin:0;color:var(--body);font-size:16px;font-weight:600">~70% of release communication automated.</p>
+</div>
+</article>
+
 <article id="managed-services" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
 <div style="border-bottom:1px solid var(--line)" data-carousel="1,2,3" data-label="sample" data-autoplay>
 <div style="position:relative;aspect-ratio:4/3;background:#FFFFFF;overflow:hidden">
@@ -257,6 +276,24 @@ html{scroll-padding-top:84px}
 <h3 style="margin:0;font-size:21px;line-height:1.3">A new business line, built from scratch</h3>
 <p style="margin:0;color:var(--body);font-size:16px">I owned the P&amp;L of Managed Services, a new revenue line next to the core product: loyalty management as a service. I turned one-off consulting into a repeatable offer: five stages from Discover to Operate, a standard deliverable at each step (a discovery mind map, a financial model, data-driven tier design, campaign plans, performance reviews), and Lovable tools that sped up the ROI, tier and uplift work. It became a growth lever, not just an add-on.</p>
 <p style="margin:0;color:var(--body);font-size:16px;font-weight:600">Revenue grew 4×, and the service was part of ~48% of closed deals.</p>
+</div>
+</article>
+
+<article id="mall-journey" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
+<div style="border-bottom:1px solid var(--line)" data-carousel="0,13,14" data-label="journey" data-autoplay>
+<div style="position:relative;aspect-ratio:16/10;background:#FFFFFF;overflow:hidden">
+<button type="button" class="zoom js-open" aria-label="View this journey larger" style="padding:10px 56px 26px"></button>
+<button type="button" class="btn-round prev js-prev" aria-label="Previous journey">‹</button>
+<button type="button" class="btn-round next js-next" aria-label="Next journey">›</button>
+<div class="dots" aria-hidden="true"></div>
+</div>
+<p class="js-caption" style="margin:0;padding:0 16px 12px;font-size:13px;color:var(--muted);text-align:center"></p>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:10px">
+<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Service design · Requirements · Prototyping</p>
+<h3 style="margin:0;font-size:21px;line-height:1.3">A new mall, one experience everyone could agree on</h3>
+<p style="margin:0;color:var(--body);font-size:16px">For a new MENA shopping mall's loyalty program, I designed the experience across the whole ecosystem: mall-owned stores, tenant shops, the service desk and a new mobile app. I mapped the core use cases end to end, scoped the app for partner selection, and prototyped the app and service-desk portal before development started.</p>
+<p style="margin:0;color:var(--body);font-size:16px;font-style:italic">The client reacted to a design, not abstract questions.</p>
 </div>
 </article>
 
@@ -303,43 +340,6 @@ html{scroll-padding-top:84px}
 <p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Program design · Loyalty economics · Cohort analysis</p>
 <h3 style="margin:0;font-size:21px;line-height:1.3">A loyalty program for a Saudi retail brand: designed it, then measured it</h3>
 <p style="margin:0;color:var(--body);font-size:16px">I designed the program, from points economics to campaigns, then ran the analysis of what it actually did. Over five months, 20% of frequent redeemers came back and bought again, against 6% of non-redeemers. They bought more often, spent more per order, and were worth four times as much over their lifetime. Redemption rate grew six-fold, from 2% to 12%.</p>
-</div>
-</article>
-
-<article id="mall-journey" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
-<div style="border-bottom:1px solid var(--line)" data-carousel="0,13,14" data-label="journey" data-autoplay>
-<div style="position:relative;aspect-ratio:16/10;background:#FFFFFF;overflow:hidden">
-<button type="button" class="zoom js-open" aria-label="View this journey larger" style="padding:10px 56px 26px"></button>
-<button type="button" class="btn-round prev js-prev" aria-label="Previous journey">‹</button>
-<button type="button" class="btn-round next js-next" aria-label="Next journey">›</button>
-<div class="dots" aria-hidden="true"></div>
-</div>
-<p class="js-caption" style="margin:0;padding:0 16px 12px;font-size:13px;color:var(--muted);text-align:center"></p>
-</div>
-<div style="padding:24px;display:flex;flex-direction:column;gap:10px">
-<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Service design · Requirements · Prototyping</p>
-<h3 style="margin:0;font-size:21px;line-height:1.3">A new mall, one experience everyone could agree on</h3>
-<p style="margin:0;color:var(--body);font-size:16px">For a new MENA shopping mall's loyalty program, I designed the experience across the whole ecosystem: mall-owned stores, tenant shops, the service desk and a new mobile app. I mapped the core use cases end to end, scoped the app for partner selection, and prototyped the app and service-desk portal before development started.</p>
-<p style="margin:0;color:var(--body);font-size:16px;font-style:italic">The client reacted to a design, not abstract questions.</p>
-</div>
-</article>
-
-<article id="release-to-reach" style="background:#FFFFFF;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0">
-<div style="border-bottom:1px solid var(--line)" data-carousel="15,4,5,9,10,11,12" data-label="slide" data-autoplay>
-<div style="position:relative;aspect-ratio:4/3;background:#FFFFFF;overflow:hidden">
-<button type="button" class="zoom js-open" aria-label="View this slide larger" style="padding:16px 60px 30px"></button>
-<button type="button" class="btn-round prev js-prev" aria-label="Previous slide">‹</button>
-<button type="button" class="btn-round next js-next" aria-label="Next slide">›</button>
-<div class="dots" aria-hidden="true"></div>
-</div>
-<p class="js-caption" style="margin:0;padding:0 16px 12px;font-size:13px;color:var(--muted);text-align:center"></p>
-</div>
-<div style="position:relative;padding:24px;display:flex;flex-direction:column;gap:10px">
-<p style="align-self:flex-end;margin:-8px 0 -2px;padding:0 4px;font-family:Caveat,cursive;font-size:26px;line-height:1;color:var(--note);transform:rotate(3deg);white-space:nowrap">my favourite project ✦</p>
-<p style="margin:0;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent)">Go-to-market system · AI process design</p>
-<h3 style="margin:0;font-size:21px;line-height:1.3">From release to reach: a release process rebuilt on Claude</h3>
-<p style="margin:0;color:var(--body);font-size:16px">Features shipped every two weeks, and each one could need release notes, a newsletter, LinkedIn carousels, a blog and a demo video. I rebuilt that as a system: features are captured from Slack and ClickUp, sorted A/B/C by impact so effort goes where it matters, and eight Claude skills I wrote draft the scripts, copy, visuals and blog, then publish to the website. AI does the first draft; I make the calls, and nothing ships without my review.</p>
-<p style="margin:0;color:var(--body);font-size:16px;font-weight:600">~70% of release communication automated.</p>
 </div>
 </article>
 
